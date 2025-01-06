@@ -1,16 +1,16 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../Modal/CartResponseModal.dart';
 
-class CartScreenController extends GetxController{
+class CartScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   RxList<CartResponseModel> cartData = RxList();
   RxList<RxInt> counter = RxList<RxInt>([RxInt(1)]);
   RxInt count = RxInt(1);
   var pass = true.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit
@@ -21,8 +21,6 @@ class CartScreenController extends GetxController{
   cartList() {
     CartResponseModel card1 = CartResponseModel();
     CartResponseModel card2 = CartResponseModel();
-
-
 
     card1.title = "Cappuccino";
     card1.images = "assets/images/cappuccino.png";
@@ -35,15 +33,12 @@ class CartScreenController extends GetxController{
     card2.amount = "3\$";
     card2.ratings = "4.5";
     cartData.add(card2);
-
-
-
-
   }
 
   void increment() {
     count++;
   }
+
   void decrement() {
     count--;
   }

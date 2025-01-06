@@ -57,54 +57,55 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
-                child: Container(
-                  width: width * 0.7,
-                  height: height * 0.1,
-                  decoration: BoxDecoration(
-                    // color: Colors.black,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding:
-                        const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
-                        child: Text(
-                          "Order Confirmed",
-                          style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+                  child: Container(
+                    width: width * 0.7,
+                    height: height * 0.1,
+                    decoration: BoxDecoration(
+                        // color: Colors.black,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
+                          child: Text(
+                            "Order Confirmed",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "20-12-2024",
-                              style: GoogleFonts.poppins(
-                                  color: Colors.black,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400),
-                            ), Text(
-                              "11.00 PM",
-                              style: GoogleFonts.poppins(
-                                  color: Colors.black,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "20-12-2024",
+                                style: GoogleFonts.poppins(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              Text(
+                                "11.00 PM",
+                                style: GoogleFonts.poppins(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )),
             ],
           ),
           Row(
@@ -115,26 +116,26 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                 },
                 child: Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                   child: Image.asset("assets/images/order_processed.png"),
                 ),
               ),
               Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
                   child: Container(
                     width: width * 0.7,
                     height: height * 0.1,
                     decoration: BoxDecoration(
-                      // color: Colors.black,
+                        // color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: Colors.black)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding:
-                          const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Text(
                             "Order Processed",
                             style: GoogleFonts.poppins(
@@ -144,7 +145,8 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -154,7 +156,8 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                                     color: Colors.black,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400),
-                              ), Text(
+                              ),
+                              Text(
                                 "11.00 PM",
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
@@ -166,8 +169,7 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                         )
                       ],
                     ),
-                  )
-              ),
+                  )),
             ],
           ),
           Row(
@@ -178,26 +180,26 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                 },
                 child: Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                   child: Image.asset("assets/images/truck.png"),
                 ),
               ),
               Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
                   child: Container(
                     width: width * 0.7,
                     height: height * 0.1,
                     decoration: BoxDecoration(
-                      // color: Colors.black,
+                        // color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: Colors.black)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding:
-                          const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Text(
                             "On Delivery",
                             style: GoogleFonts.poppins(
@@ -207,7 +209,8 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -217,7 +220,8 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                                     color: Colors.black,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400),
-                              ), Text(
+                              ),
+                              Text(
                                 "11.00 PM",
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
@@ -229,8 +233,7 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                         )
                       ],
                     ),
-                  )
-              ),
+                  )),
             ],
           ),
           Row(
@@ -241,26 +244,26 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                 },
                 child: Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                   child: Image.asset("assets/images/thumbs.png"),
                 ),
               ),
               Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
                   child: Container(
                     width: width * 0.7,
                     height: height * 0.1,
                     decoration: BoxDecoration(
-                      // color: Colors.black,
+                        // color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: Colors.black)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding:
-                          const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Text(
                             "Order Completed",
                             style: GoogleFonts.poppins(
@@ -270,7 +273,8 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -286,8 +290,7 @@ class OrderStatusScreen extends GetView<OrderStatusScreenController> {
                         )
                       ],
                     ),
-                  )
-              ),
+                  )),
             ],
           )
         ],

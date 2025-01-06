@@ -6,7 +6,7 @@ import 'AppRoutes/App_routes.dart';
 import 'UI/SplashScreen/SplashScreen.dart';
 import 'Utils/AppPreference.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppPreference().init();
   runApp(const MyApp());
@@ -18,16 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
         initialRoute: AppRoutes.root.toName,
         getPages: AppPages.list,
-      home: const SplashScreen()
-    );
+        home: const SplashScreen());
   }
 }
 

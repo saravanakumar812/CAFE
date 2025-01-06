@@ -4,6 +4,5 @@ class OrderResponseModel {
   String? amount;
   String? ratings;
 
-
-  OrderResponseModel({this.title, this.images,this.amount, this.ratings});
+  OrderResponseModel({this.title, this.images, this.amount, this.ratings});
 }

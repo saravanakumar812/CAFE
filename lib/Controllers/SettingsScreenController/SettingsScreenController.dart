@@ -1,10 +1,9 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../Components/image_pickers.dart';
 
-class SettingsScreenController extends GetxController{
+class SettingsScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController fullNameController = TextEditingController();
@@ -21,6 +20,7 @@ class SettingsScreenController extends GetxController{
   RxBool isImageSelected = false.obs;
   RxString imageString = RxString("");
   var pass = true.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit

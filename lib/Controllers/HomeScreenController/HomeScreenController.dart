@@ -72,8 +72,9 @@ class HomeScreenController extends GetxController{
 
     if (result.isNotEmpty) {
       address.value =
-      '${result[0].name}, ${result[0].locality} ${result[0].administrativeArea} , ${result[0].postalCode}';
+      ' ${result[0].locality}, ${result[0].administrativeArea} , ${result[0].postalCode}';
       // userDataProvider.setLatitude(value.latitude.toString());
+      // ${result[0].name},
       // userDataProvider.setLongitude(value.longitude.toString());
       // userDataProvider.SetSelectedLocation(address.value);
       localeAddress.value = ' ${result[0].locality} ';
@@ -85,7 +86,7 @@ class HomeScreenController extends GetxController{
   }
 
   List<KeyValues> listValues = [
-    KeyValues(key: "0", value: "COFFEE ", ImageOne: "assets/images/Coffee.png"),
+    KeyValues(key: "0", value: "COFFEE ",),
     KeyValues(key: "1", value: "DESSERTS"),
     KeyValues(key: "2", value: "ALCOHOL"),
     KeyValues(key: "3", value: "ALCOHOL FREE"),

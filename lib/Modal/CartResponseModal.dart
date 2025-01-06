@@ -4,6 +4,5 @@ class CartResponseModel {
   String? amount;
   String? ratings;
 
-
-  CartResponseModel({this.title, this.images,this.amount, this.ratings});
+  CartResponseModel({this.title, this.images, this.amount, this.ratings});
 }

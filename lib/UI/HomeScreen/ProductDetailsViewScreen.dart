@@ -207,7 +207,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                               Row(
                                 children: [
                                   InkWell(
-                                    onTap: controller.decrement,
+                                    onTap: controller.decrementOne,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -229,7 +229,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   Obx(() => Text(
-                                    controller.count.toString(),
+                                    controller.countOne.toString(),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight:
@@ -244,7 +244,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   InkWell(
-                                    onTap: controller.increment,
+                                    onTap: controller.incrementOne,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -292,7 +292,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                               Row(
                                 children: [
                                   InkWell(
-                                    onTap: controller.decrement,
+                                    onTap: controller.decrementTwo,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -314,7 +314,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   Obx(() => Text(
-                                    controller.count.toString(),
+                                    controller.countTwo.toString(),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight:
@@ -329,7 +329,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   InkWell(
-                                    onTap: controller.increment,
+                                    onTap: controller.incrementTwo,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -377,7 +377,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                               Row(
                                 children: [
                                   InkWell(
-                                    onTap: controller.decrement,
+                                    onTap: controller.decrementThree,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -399,7 +399,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   Obx(() => Text(
-                                    controller.count.toString(),
+                                    controller.countThree.toString(),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight:
@@ -414,7 +414,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   InkWell(
-                                    onTap: controller.increment,
+                                    onTap: controller.incrementThree,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -462,7 +462,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                               Row(
                                 children: [
                                   InkWell(
-                                    onTap: controller.decrement,
+                                    onTap: controller.decrementFour,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -484,7 +484,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   Obx(() => Text(
-                                    controller.count.toString(),
+                                    controller.countFour.toString(),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight:
@@ -499,7 +499,7 @@ class ProductDetailsViewScreen extends GetView<ProductDetailsViewScreenControlle
                                         0.02,
                                   ),
                                   InkWell(
-                                    onTap: controller.increment,
+                                    onTap: controller.incrementFour,
                                     child: Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(

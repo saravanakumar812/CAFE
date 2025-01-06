@@ -18,15 +18,16 @@ class CartScreen extends GetView<CartScreenController> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: GestureDetector(
-        onTap: (){
+        onTap: () {
           Get.toNamed(AppRoutes.orderScreen.toName);
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Container(
             width: width,
-            height: height* 0.08,
-            decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(10)),
+            height: height * 0.08,
+            decoration: BoxDecoration(
+                color: Colors.black, borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -40,21 +41,24 @@ class CartScreen extends GetView<CartScreenController> {
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                  Icon(Icons.arrow_forward_ios, color: AppTheme.white,),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: AppTheme.white,
+                  ),
                 ],
               ),
             ),
           ),
         ),
       ),
-
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: height * 0.1,),
+          SizedBox(
+            height: height * 0.1,
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 20.0, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
             child: Text(
               "YOUR ORDER :",
               style: GoogleFonts.poppins(

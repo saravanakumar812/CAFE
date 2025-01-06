@@ -1,7 +1,7 @@
 import 'package:get_storage/get_storage.dart';
 
 class AppPreference {
-  static const STORAGE_NAME = 'mpfoods';
+  static const STORAGE_NAME = 'Cafe';
   final _storage = GetStorage(STORAGE_NAME);
 
   Future<void> init() async {

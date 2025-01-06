@@ -31,7 +31,8 @@ class HomeScreen extends GetView<HomeScreenController> {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                       child: Icon(
                         Icons.location_on_sharp,
                         color: AppTheme.buttonColor,
@@ -72,11 +73,13 @@ class HomeScreen extends GetView<HomeScreenController> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search),
                   focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(width: 1, color: AppTheme.buttonColor),
+                    borderSide:
+                        BorderSide(width: 1, color: AppTheme.buttonColor),
                   ),
                   enabledBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
-                    borderSide: BorderSide(width: 1, color: AppTheme.buttonColor),
+                    borderSide:
+                        BorderSide(width: 1, color: AppTheme.buttonColor),
                   ),
                   hintText: "Search",
                   hintStyle: const TextStyle(
@@ -111,7 +114,8 @@ class HomeScreen extends GetView<HomeScreenController> {
             ),
             Obx(
               () => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: HorizontalScrollView(
                   children: List.generate(
                     controller.listValues.length,
@@ -127,7 +131,7 @@ class HomeScreen extends GetView<HomeScreenController> {
                 ),
               ),
             ),
-        
+
             // Padding(
             //   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             //   child: Container(
@@ -204,10 +208,9 @@ class HomeScreen extends GetView<HomeScreenController> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Container(
                 height: height * 0.6,
-        
                 child: GridView.builder(
-        
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 1,
@@ -217,20 +220,23 @@ class HomeScreen extends GetView<HomeScreenController> {
                     itemCount: controller.homeScreenData.length,
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
-                        onTap: (){
-                          Get.toNamed(AppRoutes.productView.toName,
+                        onTap: () {
+                          Get.toNamed(
+                            AppRoutes.productView.toName,
                             arguments: {
                               'title': controller.homeScreenData[index].title,
                               'images': controller.homeScreenData[index].images,
-                            },);
+                            },
+                          );
                         },
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
                           child: Container(
                             width: width * 0.33,
                             height: height * 0.195,
                             decoration: BoxDecoration(
-                              // color: Colors.black,
+                                // color: Colors.black,
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(color: Colors.black)),
                             child: Column(
@@ -246,7 +252,9 @@ class HomeScreen extends GetView<HomeScreenController> {
                                         borderRadius: BorderRadius.circular(10),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                              controller.homeScreenData[index].images.toString(),
+                                              controller
+                                                  .homeScreenData[index].images
+                                                  .toString(),
                                             ),
                                             fit: BoxFit.cover)),
                                   ),
@@ -254,7 +262,8 @@ class HomeScreen extends GetView<HomeScreenController> {
                                 Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 12),
                                   child: Text(
-                                    controller.homeScreenData[index].title.toString(),
+                                    controller.homeScreenData[index].title
+                                        .toString(),
                                     style: GoogleFonts.poppins(
                                       color: AppTheme.appBlack,
                                       fontSize: 12,
@@ -263,12 +272,15 @@ class HomeScreen extends GetView<HomeScreenController> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 5),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        controller.homeScreenData[index].amount.toString(),
+                                        controller.homeScreenData[index].amount
+                                            .toString(),
                                         style: GoogleFonts.poppins(
                                           color: Colors.black,
                                           fontSize: 14,
@@ -280,7 +292,8 @@ class HomeScreen extends GetView<HomeScreenController> {
                                         child: Container(
                                           padding: EdgeInsets.all(5),
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(100),
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
                                               color: AppTheme.buttonColor),
                                           child: Icon(
                                             Icons.add,

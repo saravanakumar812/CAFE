@@ -1,12 +1,9 @@
-import 'dart:ffi';
-
 import 'package:cafe/Controllers/FavoriteController/FavoriteScreenController.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../Components/CartCommonComponent.dart';
 import '../../Utils/theme.dart';
 
 class FavoriteScreen extends GetView<FavoriteScreenController> {
@@ -38,10 +35,11 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                   borderSide: BorderSide(width: 1, color: AppTheme.buttonColor),
                 ),
                 hintText: "Search",
-                hintStyle: const TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700),
+                hintStyle: GoogleFonts.poppins(
+                  color: AppTheme.appBlack,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
                 contentPadding: const EdgeInsets.only(left: 20),
                 border: OutlineInputBorder(
                   borderSide:
@@ -212,7 +210,10 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
           Expanded(
               child: ListView.builder(
                   itemCount: controller.favoritesData.length,
-                  itemBuilder: (context, index,) {
+                  itemBuilder: (
+                    context,
+                    index,
+                  ) {
                     return Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -253,10 +254,12 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                                     child: Container(
                                       width: width * 0.43,
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            controller.favoritesData[index].title
+                                            controller
+                                                .favoritesData[index].title
                                                 .toString(),
                                             style: GoogleFonts.poppins(
                                               color: AppTheme.appBlack,
@@ -269,7 +272,8 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                                               Image.asset(
                                                   "assets/images/Vector.png"),
                                               Text(
-                                                controller.favoritesData[index].ratings
+                                                controller.favoritesData[index]
+                                                    .ratings
                                                     .toString(),
                                                 style: GoogleFonts.poppins(
                                                   color: AppTheme.appBlack,
@@ -277,7 +281,6 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                               ),
-
                                             ],
                                           )
                                         ],
@@ -311,15 +314,18 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                                               controller.toggleFavorite(index);
                                             },
                                             icon: Obx(() => Icon(
-                                              controller.favoritesData[index].isFavorite
-                                                  ? Icons.favorite
-                                                  : Icons.favorite_border,
-                                              color: controller.favoritesData[index].isFavorite
-                                                  ? Colors.red
-                                                  : Colors.grey,
-                                            )),
+                                                  controller
+                                                          .favoritesData[index]
+                                                          .isFavorite
+                                                      ? Icons.favorite
+                                                      : Icons.favorite_border,
+                                                  color: controller
+                                                          .favoritesData[index]
+                                                          .isFavorite
+                                                      ? Colors.red
+                                                      : Colors.grey,
+                                                )),
                                           ),
-
                                           InkWell(
                                             onTap: () {},
                                             child: Container(
@@ -348,7 +354,6 @@ class FavoriteScreen extends GetView<FavoriteScreenController> {
                       ),
                     );
                   }))
-
         ],
       ),
     );

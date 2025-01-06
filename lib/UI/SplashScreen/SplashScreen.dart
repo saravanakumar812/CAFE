@@ -10,7 +10,6 @@ import '../LoginScreen/LoginScreen.dart';
 class SplashScreen extends GetView<SplashScreenController> {
   const SplashScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     SplashScreenController controller = Get.put(SplashScreenController());

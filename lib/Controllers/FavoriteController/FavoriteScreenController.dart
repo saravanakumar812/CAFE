@@ -1,18 +1,19 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../Modal/FavoritesResponseModal.dart';
 
-class FavoriteScreenController extends GetxController{
+class FavoriteScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController searchController = TextEditingController();
+
   // RxList<FavoritesResponseModel> favoritesData = RxList();
   var favoritesData = <FavoritesResponseModel>[].obs;
   RxList<RxInt> counter = RxList<RxInt>([RxInt(1)]);
   RxInt count = RxInt(1);
   RxBool isLoading = RxBool(false);
+
   // RxBool isFavorite = RxBool(false);
 
   void incrementCounter(int index) {
@@ -52,26 +53,36 @@ class FavoriteScreenController extends GetxController{
     isLoading.value = false;
   }
 
-
-
-
   var pass = true.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
     favoritesList();
   }
+
   favoritesList() {
     FavoritesResponseModel card1 = FavoritesResponseModel(
-        title: 'Cappuccino', images: 'assets/images/cappuccino.png', ratings: '3.5', amount: '2\$');
+        title: 'Cappuccino',
+        images: 'assets/images/cappuccino.png',
+        ratings: '3.5',
+        amount: '2\$');
     FavoritesResponseModel card2 = FavoritesResponseModel(
-        title: 'Espresso', images: 'assets/images/Espresso.png', ratings: '4.5', amount: '3\$');
+        title: 'Espresso',
+        images: 'assets/images/Espresso.png',
+        ratings: '4.5',
+        amount: '3\$');
     FavoritesResponseModel card3 = FavoritesResponseModel(
-        title: 'Americano', images: 'assets/images/Americano.png', ratings: '2.5', amount: '2.55\$');
+        title: 'Americano',
+        images: 'assets/images/Americano.png',
+        ratings: '2.5',
+        amount: '2.55\$');
     FavoritesResponseModel card4 = FavoritesResponseModel(
-        title: 'Latte', images: 'assets/images/Latte.png', ratings: '44.3', amount: '4\$');
-
+        title: 'Latte',
+        images: 'assets/images/Latte.png',
+        ratings: '44.3',
+        amount: '4\$');
 
     // card1.title = "";
     // card1.images = "";
@@ -96,8 +107,6 @@ class FavoriteScreenController extends GetxController{
     // card4.amount = "4\$";
     // card4.ratings = "4.3";
     favoritesData.add(card4);
-
-
   }
 
 //   void updateFavorite() {
@@ -105,13 +114,14 @@ class FavoriteScreenController extends GetxController{
 // }
   void toggleFavorite(int index) {
     var currentStatus = favoritesData[index].isFavorite ?? false;
-    favoritesData[index] = favoritesData[index]
-        .copyWith(isFavorite: !currentStatus);
+    favoritesData[index] =
+        favoritesData[index].copyWith(isFavorite: !currentStatus);
   }
 
   void increment() {
     count++;
   }
+
   void decrement() {
     count--;
   }

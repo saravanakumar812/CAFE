@@ -1,7 +1,9 @@
 import 'package:cafe/Components/image_pickers.dart';
 import 'package:cafe/Controllers/SettingsScreenController/SettingsScreenController.dart';
+import 'package:date_format/date_format.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,17 +70,17 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                             ),
                 ),
               ),
-                  Positioned(
-                    right: -25,
-                    bottom: 5,
-                    child: MaterialButton(
-                        color: AppTheme.primaryColor,
-                        shape: const CircleBorder(),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ImagePicks(
+              Positioned(
+                right: -25,
+                bottom: 5,
+                child: MaterialButton(
+                    color: AppTheme.primaryColor,
+                    shape: const CircleBorder(),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ImagePicks(
                                     previewImageList: [],
                                     isMultiple: true,
                                     title: "Select Image",
@@ -91,12 +93,12 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                                       Get.back();
                                     },
                                   )));
-                        },
-                        child: const Icon(
-                          Icons.camera_alt_rounded,
-                          color: Colors.black,
-                        )),
-                  ),
+                    },
+                    child: const Icon(
+                      Icons.camera_alt_rounded,
+                      color: Colors.black,
+                    )),
+              ),
             ])),
             SizedBox(
               height: 20,
@@ -116,11 +118,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'Full Name'.tr,
                       hintStyle: GoogleFonts.poppins(
@@ -130,7 +134,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                       ),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.person)),
@@ -186,11 +191,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'Date of Birth'.tr,
                       hintStyle: const TextStyle(
@@ -199,7 +206,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.calendar_month)),
@@ -227,11 +235,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'Area'.tr,
                       hintStyle: const TextStyle(
@@ -240,7 +250,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.location_on_rounded)),
@@ -268,11 +279,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'City'.tr,
                       hintStyle: const TextStyle(
@@ -281,7 +294,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.location_on_rounded)),
@@ -309,11 +323,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'State'.tr,
                       hintStyle: const TextStyle(
@@ -322,7 +338,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.location_on_rounded)),
@@ -348,8 +365,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: TextFormField(
                     onTap: () {
-                      // showBottomTimePicker(
-                      //     context, controller.timeOfBirthController);
+                      showBottomTimePicker(
+                          context, controller.timeOfBirthController);
                     },
                     keyboardType: TextInputType.number,
                     readOnly: true,
@@ -357,11 +374,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: AppTheme.white),
+                          borderSide:
+                              BorderSide(color: AppTheme.lightCoffeeColor),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: AppTheme.white),
+                          borderSide:
+                              BorderSide(color: AppTheme.lightCoffeeColor),
                         ),
                         hintText: 'Time of Birth'.tr,
                         hintStyle: const TextStyle(
@@ -370,7 +389,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                             fontWeight: FontWeight.w400),
                         contentPadding: const EdgeInsets.all(6),
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(color: AppTheme.white),
+                          borderSide:
+                              BorderSide(color: AppTheme.lightCoffeeColor),
                           borderRadius: BorderRadius.circular(0),
                         ),
                         prefixIcon: Icon(Icons.access_time_filled_outlined)),
@@ -399,11 +419,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'Email'.tr,
                       hintStyle: const TextStyle(
@@ -412,7 +434,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.email)),
@@ -440,11 +463,13 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                       ),
                       hintText: 'Phone Number'.tr,
                       hintStyle: const TextStyle(
@@ -453,7 +478,8 @@ class SettingsScreen extends GetView<SettingsScreenController> {
                           fontWeight: FontWeight.w400),
                       contentPadding: const EdgeInsets.all(6),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppTheme.white),
+                        borderSide:
+                            BorderSide(color: AppTheme.lightCoffeeColor),
                         borderRadius: BorderRadius.circular(0),
                       ),
                       prefixIcon: Icon(Icons.phone)),
@@ -469,6 +495,120 @@ class SettingsScreen extends GetView<SettingsScreenController> {
           ],
         ),
       ),
+    );
+  }
+
+  showBottomTimePicker(
+    BuildContext context,
+    TextEditingController controller,
+  ) {
+    var times;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    showModalBottomSheet(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16.0),
+          topRight: Radius.circular(16.0),
+        ),
+      ),
+      isScrollControlled: true,
+      context: context,
+      builder: (BuildContext context) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              height: 280,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 15, bottom: 7),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(height: 20, width: 20),
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: const Text("Select Time",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: AppTheme.appBlack,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ),
+                        GestureDetector(
+                            onTap: () {
+                              Get.back();
+                            },
+                            child: Icon(Icons.clear))
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: TimePickerSpinner(
+                      is24HourMode: false,
+                      spacing: 30,
+                      itemHeight: 37,
+                      itemWidth: 60,
+                      isForce2Digits: true,
+                      onTimeChange: (time) {
+                        times = time;
+                      },
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      AppButton2(
+                        width: width * 0.45,
+                        height: 40,
+                        title: 'Cancel',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        onPressed: () {
+                          Get.back();
+                        },
+                        color: Colors.white,
+                        titleColor: AppTheme.bottomTabsLabelInActiveColor,
+                        borderColor: AppTheme.cancelBorder,
+                      ),
+                      AppButton2(
+                        width: width * 0.45,
+                        height: 40,
+                        title: 'Save ',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        onPressed: () {
+                          controller.text = " ${formatDate(times, [
+                                hh.trim(),
+                                ':',
+                                nn.trim(),
+                                ':',
+                                am.trim()
+                              ])}";
+                          Navigator.of(context).pop();
+                        },
+                        titleColor: Colors.white,
+                        color: AppTheme.buttonColor,
+                        borderColor: AppTheme.primaryColor,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }

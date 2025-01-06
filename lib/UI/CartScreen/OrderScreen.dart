@@ -10,7 +10,6 @@ import '../../Components/theme.dart';
 class OrderScreen extends GetView<OrderScreenController> {
   const OrderScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -18,15 +17,16 @@ class OrderScreen extends GetView<OrderScreenController> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: GestureDetector(
-        onTap: (){
+        onTap: () {
           controller.openCheckOut();
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Container(
             width: width,
-            height: height* 0.08,
-            decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(10)),
+            height: height * 0.08,
+            decoration: BoxDecoration(
+                color: Colors.black, borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -40,7 +40,10 @@ class OrderScreen extends GetView<OrderScreenController> {
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                  Icon(Icons.arrow_forward_ios, color: AppTheme.white,),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: AppTheme.white,
+                  ),
                 ],
               ),
             ),
@@ -49,15 +52,16 @@ class OrderScreen extends GetView<OrderScreenController> {
       ),
       persistentFooterButtons: [
         GestureDetector(
-          onTap: (){
+          onTap: () {
             Get.toNamed(AppRoutes.orderStatus.toName);
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Container(
               width: width,
-              height: height* 0.08,
-              decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(10)),
+              height: height * 0.08,
+              decoration: BoxDecoration(
+                  color: Colors.black, borderRadius: BorderRadius.circular(10)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -71,7 +75,10 @@ class OrderScreen extends GetView<OrderScreenController> {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    Icon(Icons.arrow_forward_ios, color: AppTheme.white,),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: AppTheme.white,
+                    ),
                   ],
                 ),
               ),
@@ -83,17 +90,16 @@ class OrderScreen extends GetView<OrderScreenController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           GestureDetector(
-            onTap: (){
+            onTap: () {
               Get.back();
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               child: Image.asset("assets/images/Back_Button_Black.png"),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 20.0, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
             child: Text(
               "YOUR ORDER :",
               style: GoogleFonts.poppins(
@@ -108,12 +114,12 @@ class OrderScreen extends GetView<OrderScreenController> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                       child: Container(
                         width: width,
                         height: height * 0.135,
                         decoration: BoxDecoration(
-                          // color: Colors.black,
+                            // color: Colors.black,
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(color: Colors.black)),
                         child: Row(
@@ -142,12 +148,12 @@ class OrderScreen extends GetView<OrderScreenController> {
                                 children: [
                                   Padding(
                                     padding:
-                                    EdgeInsets.symmetric(horizontal: 12),
+                                        EdgeInsets.symmetric(horizontal: 12),
                                     child: Container(
                                       width: width * 0.43,
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
                                             controller.orderData[index].title
@@ -198,7 +204,7 @@ class OrderScreen extends GetView<OrderScreenController> {
                                       width: width * 0.43,
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Icon(Icons.favorite_border),
                                           Row(
@@ -209,8 +215,8 @@ class OrderScreen extends GetView<OrderScreenController> {
                                                   padding: EdgeInsets.all(5),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                      BorderRadius.circular(
-                                                          100),
+                                                          BorderRadius.circular(
+                                                              100),
                                                       color: Colors.red),
                                                   child: Icon(
                                                     CupertinoIcons.minus,
@@ -221,23 +227,23 @@ class OrderScreen extends GetView<OrderScreenController> {
                                               ),
                                               SizedBox(
                                                 width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
+                                                        .size
+                                                        .width *
                                                     0.02,
                                               ),
                                               Obx(() => Text(
-                                                controller.count.toString(),
-                                                style: TextStyle(
-                                                  fontSize: 12,
-                                                  fontWeight:
-                                                  FontWeight.w400,
-                                                  color: Colors.red,
-                                                ),
-                                              )),
+                                                    controller.count.toString(),
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Colors.red,
+                                                    ),
+                                                  )),
                                               SizedBox(
                                                 width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
+                                                        .size
+                                                        .width *
                                                     0.02,
                                               ),
                                               InkWell(
@@ -246,10 +252,10 @@ class OrderScreen extends GetView<OrderScreenController> {
                                                   padding: EdgeInsets.all(5),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                      BorderRadius.circular(
-                                                          100),
-                                                      color:
-                                                      AppTheme.secondaryColor),
+                                                          BorderRadius.circular(
+                                                              100),
+                                                      color: AppTheme
+                                                          .secondaryColor),
                                                   child: Icon(
                                                     Icons.add,
                                                     color: Colors.white,
@@ -259,8 +265,8 @@ class OrderScreen extends GetView<OrderScreenController> {
                                               ),
                                               SizedBox(
                                                 width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
+                                                        .size
+                                                        .width *
                                                     0.03,
                                               ),
                                             ],

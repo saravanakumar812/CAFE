@@ -34,6 +34,5 @@ class AppPages {
         name: AppRoutes.orderStatus.toName,
         page: () => OrderStatusScreen(),
         binding: OrderStatusScreenBinding()),
-
   ];
 }

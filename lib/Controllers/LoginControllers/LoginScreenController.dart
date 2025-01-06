@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
@@ -6,7 +5,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class LoginScreenController extends GetxController{
+class LoginScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   RxString currentLongitudeController = RxString("");
@@ -14,12 +13,14 @@ class LoginScreenController extends GetxController{
   RxString address = RxString("India");
   RxString localeAddress = RxString("");
   var pass = true.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
     determinePosition();
   }
+
   Future<void> determinePosition() async {
     bool serviceEnabled;
     LocationPermission permission;
@@ -44,7 +45,7 @@ class LoginScreenController extends GetxController{
     if (permission == LocationPermission.deniedForever) {
       Fluttertoast.showToast(
           msg:
-          'Location permissions are permanently denied, we cannot request permissions.');
+              'Location permissions are permanently denied, we cannot request permissions.');
       return;
     }
     var positions = await Geolocator.getCurrentPosition();
@@ -56,22 +57,20 @@ class LoginScreenController extends GetxController{
     currentLatitudeController.value = positions.latitude.toString();
     setMarker((positions.latitude), positions.longitude);
   }
+
   Future<void> setMarker(Latitude, longitude) async {
     // initialPosition.value = value;
     List<Placemark> result =
-    await placemarkFromCoordinates(Latitude, longitude);
+        await placemarkFromCoordinates(Latitude, longitude);
 
     if (result.isNotEmpty) {
       address.value =
-      '${result[0].name}, ${result[0].locality} ${result[0]
-          .administrativeArea} , ${result[0].postalCode}';
-      localeAddress.value =
-      ' ${result[0].locality} ';
+          '${result[0].name}, ${result[0].locality} ${result[0].administrativeArea} , ${result[0].postalCode}';
+      localeAddress.value = ' ${result[0].locality} ';
       // userDataProvider.setLatitude(value.latitude.toString());
       // userDataProvider.setLongitude(value.longitude.toString());
       // userDataProvider.SetSelectedLocation(address.value);
       print("Address ${address.value}");
-
     }
 
     // Fluttertoast.showToast(msg: '📍' + address.value);

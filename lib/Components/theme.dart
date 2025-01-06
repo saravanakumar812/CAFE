@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class AppTheme {
   // I GREEN COLORS
   static const Color liteWhite = Color(0xFFe2e4e3);
+  static const Color lightCoffeeColor = Color(0xFFB5723A);
+  static const Color buttonColor = Color(0xFFA66228);
   static const Color litePink = Color(0xFFeacbea);
   static const Color liteBlack = Color(0xf4f2ff);
   static const Color lite = Color(0xFFF4F2FF);

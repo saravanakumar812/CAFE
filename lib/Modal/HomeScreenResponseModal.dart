@@ -3,6 +3,5 @@ class HomeScreenResponseModel {
   String? images;
   String? amount;
 
-
-  HomeScreenResponseModel({this.title, this.images,this.amount});
+  HomeScreenResponseModel({this.title, this.images, this.amount});
 }
