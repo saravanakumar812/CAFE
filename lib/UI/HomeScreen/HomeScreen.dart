@@ -82,10 +82,11 @@ class HomeScreen extends GetView<HomeScreenController> {
                         BorderSide(width: 1, color: AppTheme.buttonColor),
                   ),
                   hintText: "Search",
-                  hintStyle: const TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700),
+                  hintStyle: GoogleFonts.poppins(
+                    color: AppTheme.appBlack,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  ),
                   contentPadding: const EdgeInsets.only(left: 20),
                   border: OutlineInputBorder(
                     borderSide:

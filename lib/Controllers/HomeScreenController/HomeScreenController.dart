@@ -18,6 +18,7 @@ class HomeScreenController extends GetxController{
   RxString localeAddress = RxString("");
   RxInt selectedTabIndex = 0.obs;
   @override
+
   void onInit() {
     // TODO: implement onInit
     super.onInit();
@@ -25,7 +26,6 @@ class HomeScreenController extends GetxController{
     print("Longitude in Current Location : ${AppPreference().getLongitude}");
     setMarker(AppPreference().getLatitude, AppPreference().getLongitude);
     homeScreenView();
-
   }
 
   homeScreenView() {
@@ -72,7 +72,8 @@ class HomeScreenController extends GetxController{
 
     if (result.isNotEmpty) {
       address.value =
-      ' ${result[0].locality}, ${result[0].administrativeArea} , ${result[0].postalCode}';
+      ' ${result[0].locality}-${result[0].postalCode} ';
+      // ${result[0].administrativeArea} ,
       // userDataProvider.setLatitude(value.latitude.toString());
       // ${result[0].name},
       // userDataProvider.setLongitude(value.longitude.toString());

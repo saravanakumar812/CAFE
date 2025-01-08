@@ -70,7 +70,7 @@ class LoginScreenController extends GetxController {
       // userDataProvider.setLatitude(value.latitude.toString());
       // userDataProvider.setLongitude(value.longitude.toString());
       // userDataProvider.SetSelectedLocation(address.value);
-      print("Address ${address.value}");
+      print("Address : ${address.value}");
     }
 
     // Fluttertoast.showToast(msg: '📍' + address.value);
